@@ -1,0 +1,219 @@
+@import "./globals";
+@import "./variables";
+
+//Logo
+.logo {
+    padding: 3.1rem 0 3.2rem 3.2rem;
+
+    img {
+        max-width: 100px;
+    }
+}
+
+.logo.desk {
+    display: none;
+}
+
+//Images
+.bg__img {
+    .hero {
+        width: 100%;
+
+        &.desk {
+            display: none;
+        }
+    }
+}
+
+//Main info
+.main__info {
+    padding: 6.4rem 3.2rem 9.2rem;
+    text-align: center;
+
+    .main__title {
+        margin-bottom: 1.6rem;
+    }
+
+    .main__text {
+        max-width: 310px;
+        margin: 0 auto 3.2rem auto;
+    }
+
+    //Form
+    form {
+        position: relative;
+        max-width: 310px;
+        margin: 0 auto;
+
+        input {
+            width: 100%;
+            height: 48px;
+            padding: 1.1rem 0 0.9rem 2.4rem;
+            border: 1px solid $lightPink;
+            border-radius: 2.8rem;
+            outline: none;
+            background-color: transparent;
+            font-size: 1.2rem;
+
+            &::placeholder {
+                font-size: 1.4rem;
+                font-family: 'Josefin Sans';
+                line-height: 2.8rem;
+                color: $lightPink;
+            }
+
+            &.error {
+                border: 2px solid #F96464;
+            }
+        }
+
+        .submit__btn {
+            width: 64px;
+            height: 48px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+            mix-blend-mode: normal;
+            box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+            border: none;
+            outline: none;
+            border-radius: 2.8rem;
+            cursor: pointer;
+            transition: opacity 0.2s ease-in;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        .error__img,
+        .error__text {
+            display: none;
+        }
+
+        &.error {
+
+            .error__img {
+                display: block;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 0;
+                right: 80px;
+                transform: translate(0, 50%);
+            }
+
+            .error__text {
+                display: block;
+                margin-top: 0.8rem;
+                position: relative;
+                left: 25px;
+                font-size: 1.3rem;
+                line-height: 1.3rem;
+                color: #F96464;
+                text-align: left;
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        height: 100vh;
+    }
+
+    //Logo
+    .logo {
+        padding: 0;
+
+        img {
+            max-width: 160px;
+        }
+
+        &.mob {
+            display: none;
+        }
+
+        &.desk {
+            display: block;
+            margin-bottom: 13.6rem;
+        }
+    }
+
+    //Images
+    .bg__img {
+        .hero {
+            &.desk {
+                display: block;
+                height: 100vh;
+            }
+
+            &.mob {
+                display: none;
+            }
+        }
+    }
+
+    //Container
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        //Main info
+        .main__info {
+            padding: 0;
+            margin: 0 auto;
+            text-align: left;
+            align-items: center;
+
+            .main__title {
+                margin-bottom: 3.2rem;
+                font-size: 6.4rem;
+                line-height: 6.4rem;
+                letter-spacing: 1.732rem;
+            }
+
+            .main__text {
+                margin: 0 auto 4rem auto;
+                max-width: 445px;
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+            }
+
+            form {
+                max-width: 445px;
+                margin: 0 auto;
+
+                input {
+                    height: 56px;
+                    padding: 1.5rem 0 1.3rem 3.2rem;
+                    font-size: 1.4rem;
+
+                    &::placeholder {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                .submit__btn {
+                    width: 100px;
+                    height: 56px;
+                }
+
+                &.error {
+                    .error__img {
+                        right: 130px;
+                        transform: translate(0, 70%);
+                    }
+
+                    .error__text {
+                        margin-top: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
