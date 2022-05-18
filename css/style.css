@@ -162,7 +162,7 @@ h1 span {
 }
 
 .main__info form.error input {
-  border: 3px solid #F96464;
+  border: 2px solid #F96464;
 }
 
 @media screen and (min-width: 1200px) {
