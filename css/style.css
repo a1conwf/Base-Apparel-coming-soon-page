@@ -112,10 +112,6 @@ h1 span {
   color: #CE9898;
 }
 
-.main__info form input.error {
-  border: 2px solid #F96464;
-}
-
 .main__info form .submit__btn {
   width: 64px;
   height: 48px;
@@ -163,6 +159,10 @@ h1 span {
   line-height: 1.3rem;
   color: #F96464;
   text-align: left;
+}
+
+.main__info form.error input {
+  border: 3px solid #F96464;
 }
 
 @media screen and (min-width: 1200px) {

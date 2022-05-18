@@ -61,10 +61,6 @@
                 line-height: 2.8rem;
                 color: $lightPink;
             }
-
-            &.error {
-                border: 2px solid #F96464;
-            }
         }
 
         .submit__btn {
@@ -113,6 +109,10 @@
                 line-height: 1.3rem;
                 color: #F96464;
                 text-align: left;
+            }
+
+            input {
+                border: 3px solid #F96464;
             }
 
         }
